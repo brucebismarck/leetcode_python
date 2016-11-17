@@ -1,3 +1,4 @@
+
 class Solution:
     """
     @param n: An integer as description
