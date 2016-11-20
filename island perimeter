@@ -1,0 +1,37 @@
+perimeter = 0
+for i in range(len(grid)):
+    for j in range(len(grid[0])):
+        if  i == len(grid) - 1 and j != len(grid[0]) - 1 :
+            if  grid[i][j] == 1  and grid[i][j-1] + grid[i][j+1] + grid[i-1][j]  == 3:
+                 perimeter += 1
+            elif grid[i][j] == 1 and grid[i][j-1] + grid[i][j+1] + grid[i-1][j]  == 2:
+                 perimeter += 2
+            elif grid[i][j] == 1 and grid[i][j-1] + grid[i][j+1] + grid[i-1][j]  == 1:
+                 perimeter += 3
+            else: 
+                 perimeter += 0
+        elif j == len(grid[0]) - 1 and i !=len(grid) -1 :
+            if  grid[i][j] == 1  and grid[i][j-1]  + grid[i-1][j] + grid[i+1][j] == 3:
+                 perimeter += 1
+            elif grid[i][j] == 1 and grid[i][j-1]  + grid[i-1][j] + grid[i+1][j] == 2:
+                 perimeter += 2
+            elif grid[i][j] == 1 and grid[i][j-1]  + grid[i-1][j] + grid[i+1][j] == 1:
+                 perimeter += 3
+            else: 
+                 perimeter += 0
+        elif j == len(grid[0]) - 1 and i ==len(grid) -1:
+            if   grid[i][j] == 1 and grid[i][j-1]  + grid[i-1][j]  == 2:
+                 perimeter += 2
+            elif grid[i][j] == 1 and grid[i][j-1]  + grid[i-1][j]  == 1:
+                 perimeter += 3
+            else:  
+                 perimeter += 0
+        elif i != len(grid) - 1 and j != len(grid[0]) - 1 :
+            if   grid[i][j] == 1 and grid[i][j-1] + grid[i][j+1] + grid[i-1][j] + grid[i+1][j] == 3:
+                 perimeter += 1
+            elif grid[i][j] == 1 and grid[i][j-1] + grid[i][j+1] + grid[i-1][j] + grid[i+1][j] == 2:
+                 perimeter += 2
+            elif grid[i][j] == 1 and grid[i][j-1] + grid[i][j+1] + grid[i-1][j] + grid[i+1][j] == 1:
+                 perimeter += 3
+            else:
+                 perimeter += 0
