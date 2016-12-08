@@ -1,0 +1,17 @@
+class Solution(object):
+    def findTheDifference(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: str
+        """
+        s_new = []
+        t_new = []
+        for i in range(len(s)):   
+            s_new.append(s[i])
+        for i in range(len(t)):
+            t_new.append(t[i])
+        for i in s_new:
+            if i in t_new:
+                t_new.remove(i)
+        return t_new[0]
